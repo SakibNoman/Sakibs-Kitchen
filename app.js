@@ -1,7 +1,7 @@
 
 const userInput = document.getElementById("search-box");
 
-document.getElementById("search-btn").addEventListener("click", function() {
+document.getElementById("search-btn").addEventListener("click", search => {
     searchApi(userInput.value);
 })
 const searchApi = searchMeal =>{
@@ -17,12 +17,12 @@ const searchApi = searchMeal =>{
 
 const allCards = document.getElementById("all-cards");
 const makeCard = content =>{
-    
+    allCards.innerHTML = "";
     content.forEach(element => {
         const singleCard = `
-            <div class="card" style="width: 14rem;">
-                <img src="${element.strMealThumb}" class="card-img-top" alt="...">
-                <div class="card-body">
+            <div class="card border-0" style="width: 14rem; height: 16rem;">
+                <img src="${element.strMealThumb}" class="card-img-top h-75 w-100" alt="...">
+                <div class="card-body overflow-auto ">
                     <p class="card-text text-center fw-bold">${element.strMeal}</p>
                 </div>
             </div>
@@ -30,21 +30,3 @@ const makeCard = content =>{
         allCards.innerHTML += singleCard;
     }); 
 }
-
-
-
-
-
-
-
-
-
-
-// /* <div class="card" style="width: 18rem;">
-//                 <img src="..." class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                     <p class="card-text">Some quick</p>
-//                 </div>
-// </div> 
-//item-name : data.meals[0].strMeal
-//item-img : data.meals[0].strMealThumb

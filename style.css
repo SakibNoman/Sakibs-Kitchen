@@ -9,3 +9,7 @@ body{
 .custom-card{
     width: 50px;
 }
+#search-btn{
+    background-color: #3B2D64;
+    color: white;
+}
