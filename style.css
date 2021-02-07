@@ -1,0 +1,11 @@
+body{
+    background-color: #EDD263;
+}
+#all-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 25px;
+}
+.custom-card{
+    width: 50px;
+}
