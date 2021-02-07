@@ -1,7 +1,9 @@
 
 const userInput = document.getElementById("search-box");
 const detailsParent = document.getElementById("details-card");
+const allCards = document.getElementById("all-cards");
 
+//getting user input and calling appropriate function
 document.getElementById("search-btn").addEventListener("click", search => {
     if((userInput.value).length===0){
         errorDisplay();
@@ -10,6 +12,8 @@ document.getElementById("search-btn").addEventListener("click", search => {
         searchApi(userInput.value);
     }
 })
+
+//fetching search result and calling appropriate function
 const searchApi = searchMeal => {
     document.getElementById("alertH3").style.display = "none";
     let api = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchMeal}`
@@ -23,7 +27,7 @@ const searchApi = searchMeal => {
         })
 }
 
-const allCards = document.getElementById("all-cards");
+//making card for every meal
 const makeCard = content => {
     allCards.innerHTML = "";
     detailsParent.innerHTML ="";
@@ -40,8 +44,8 @@ const makeCard = content => {
     });
 }
 
+//making list of ingredients
 const detailsView = mealId => {
-    
     let api = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
     fetch(api)
         .then(res => res.json())
@@ -70,8 +74,12 @@ const detailsView = mealId => {
         detailsParent.innerHTML = detailsCard;
         })
 }
+
+//function for error handling
 const errorDisplay = () =>{
     allCards.innerHTML = "";
     detailsParent.innerHTML = "";
     document.getElementById("alertH3").style.display = "block";
 }
+
+//Thank You

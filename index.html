@@ -12,31 +12,35 @@
 </head>
 
 <body>
+    <!-- ---+++Navbar+++--- -->
     <header class="container mb-5">
-          <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <div class="container-fluid">
-              <a class="navbar-brand fw-bold fs-2" href="#">Sakib's Kitchen</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav offset-7">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link" href="#">About</a>
-                  <a class="nav-link" href="#">Recipes</a>
-                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>
+                <a class="navbar-brand fw-bold fs-2" href="#">Sakib's Kitchen</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav offset-7">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Recipes</a>
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </nav>
+        </nav>
     </header>
-
     <main>
+        <!-- ---+++Details View+++--- -->
         <section>
-            <div id="details-card" class="container offset-4" >
+            <div id="details-card" class="container offset-4">
 
             </div>
         </section>
+        <!-- ---+++Search Bar+++--- -->
         <section class="container">
             <div class="input-group mb-3 w-50 offset-3 mt-3">
                 <input id="search-box" type="text" class="form-control" placeholder="Search for Meal..."
@@ -46,19 +50,21 @@
                 </div>
             </div>
         </section>
+        <!-- ---+++All Cards View+++--- -->
         <section class="container cards-parent">
             <div id="all-cards">
-                
+
             </div>
         </section>
+        <!-- ---+++Error message View+++--- -->
         <section class="container">
             <div>
                 <h3 id="alertH3">Nothing found!!!</h3>
             </div>
         </section>
     </main>
-
     <script src="app.js"></script>
+    <!-- ---+++Thank You+++--- -->
 </body>
 
 </html>
