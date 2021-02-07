@@ -13,3 +13,8 @@ body{
     background-color: #3B2D64;
     color: white;
 }
+#alertH3{
+    text-align: center;
+    margin-top: 20%;
+    display: none;
+}
