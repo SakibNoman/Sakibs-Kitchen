@@ -56,22 +56,29 @@ const detailsView = mealId => {
                 <div id="ingredient-list"  class="card-body overflow-auto">
                     <h1 class="card-text fs-3 fw-bold" >${data.meals[0].strMeal}</h1>
                     <p class="card-text fw-bold">Ingredients</p>
-                    <ul>
-                        <li>${data.meals[0].strIngredient1}</li>
-                        <li>${data.meals[0].strIngredient2}</li>
-                        <li>${data.meals[0].strIngredient3}</li>
-                        <li>${data.meals[0].strIngredient4}</li>
-                        <li>${data.meals[0].strIngredient5}</li>
-                        <li>${data.meals[0].strIngredient6}</li>
-                        <li>${data.meals[0].strIngredient7}</li>
-                        <li>${data.meals[0].strIngredient8}</li>
-                        <li>${data.meals[0].strIngredient9}</li>
-                        <li>${data.meals[0].strIngredient10}</li>
-                    </ul>
+                    
                 </div>
         </div> 
         `;
         detailsParent.innerHTML = detailsCard;
+        
+        const div = document.getElementById("ingredient-list");
+        const ul = document.createElement("ul");
+        ul.className = "ul-ingredient";
+
+        console.log(data.meals[0]["strIngredient"+1]);
+        for(let i=1;i<=20;i++){
+            if(data.meals[0]["strIngredient"+i] =="")
+            {
+                break;
+            }
+            else{
+                const li = document.createElement("li");
+                li.innerText = "✔" + data.meals[0]["strIngredient"+i];
+                ul.appendChild(li);
+            }
+        }
+        div.appendChild(ul);
         })
 }
 

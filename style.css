@@ -18,3 +18,6 @@ body{
     margin-top: 20%;
     display: none;
 }
+.ul-ingredient li{
+    list-style-type:none;
+}
